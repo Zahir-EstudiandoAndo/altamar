@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Altamar | Studio</title>
+  <meta name="description" content="Filter is a digital design studio crafting brand identities, products, motion graphics, and web experiences. Design that moves with purpose.">
+  <link rel="preconnect" href="https://filter.im">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="custom-cursor" id="cursor"></div>
+
+<div class="grid-overlay" aria-hidden="true">
+  <div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div>
+  <div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div>
+</div>
+
+<div class="blur-vignette blur-vignette-top" aria-hidden="true"></div>
+<div class="blur-vignette blur-vignette-bottom" aria-hidden="true"></div>
+
+
+
+<!-- Menu Toggle -->
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+  <div class="menu-toggle-icon">
+    <div class="hamburger">
+      <div class="menu-bar" data-position="top"></div>
+      <div class="menu-bar" data-position="bottom"></div>
+    </div>
+  </div>
+</button>
+
+<!-- Menu Backdrop -->
+<div class="menu-blur-overlay" id="menuOverlay"></div>
+
+<!-- Full-screen Menu -->
+<nav class="menu" id="menu" aria-hidden="true">
+  <div class="menu-wrapper">
+    <button class="menu-close-btn" id="menuClose" aria-label="Close menu">X</button>
+    <div class="menu-col-1">
+      <ul class="menu-links" role="list">
+        <li class="menu-link-item">
+          <a href="index.html"><span>Principal</span></a>
+        </li>
+        <li class="menu-link-item">
+          <a href="studio.html"><span>Proyectos</span></a>
+        </li>
+        <li class="menu-link-item">
+          <a href="connect.html"><span>Contactanos</span></a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── LOADER ─────────────────────────────────────────── -->
+<div class="loader" id="loader">
+  <div class="loader-overlay">
+    <div class="loader-block" id="loaderBlockL"></div>
+    <div class="loader-block" id="loaderBlockR"></div>
+  </div>
+  <div class="intro-logo">
+    <div class="word" id="loaderWord1"><h1>Altamar</h1></div>
+    <div class="loader-divider" id="loaderDivider"></div>
+    <div class="word" id="loaderWord2"><h1>Studio</h1></div>
+  </div>
+  <div class="loader-counter">
+    <h1 id="counterText" style="margin:0;font-weight:400;font-size:2.5rem;color:var(--fg);">0%</h1>
+  </div>
+</div>
+
+<!-- ─── HERO ──────────────────────────────────────────── -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-img-wrapper">
+      <div class="placeholder-media">Hero Video / Image</div>
+    </div>
+    <div class="hero-overlay"></div>
+    <footer class="hero-footer">
+      <div class="hero-footer-main">
+        <div class="hero-footer-col hero-footer-left">
+          <h3 class="hero-h3" id="heroH3" style="max-width: 600px; line-height:1.2; font-weight:500;">El estudio detrás de las principales empresas de Veracruz.</h3>
+        </div>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-bottom">
+        <div class="hero-bottom-left">
+          <p id="heroP">Somos los socios de diseño e ingeniería para fundadores y grandes empresas. Desde la visión inicial hasta el producto final. Un estudio digital de desarrollo web e interfaces de primer nivel.</p>
+          <div class="hero-buttons" id="heroButtons">
+            <a href="#" onclick="event.preventDefault();" class="btn" rel="noopener">
+              <span class="circle"><span class="icon"><svg viewBox="0 0 24 24" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+              <span class="button-text">Agendar una llamada</span>
+            </a>
+            <a href="#" onclick="event.preventDefault();" class="btn btn-outline" rel="noopener">
+              <span class="circle"><span class="icon"><svg viewBox="0 0 24 24" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+              <span class="button-text">Enviar un mensaje</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-bottom-right" id="heroLogos">
+          <p class="hero-logos-eyebrow">Trusted by incredible brands</p>
+          <div class="hero-logos">
+            <div class="hero-logo-pill">Octane</div>
+            <div class="hero-logo-pill">Coinbase</div>
+            <div class="hero-logo-pill">Red Bull</div>
+            <div class="hero-logo-pill">Whop</div>
+            <div class="hero-logo-pill">Bland</div>
+            <div class="hero-logo-pill">Azura</div>
+            <div class="hero-logo-pill">Figma</div>
+            <div class="hero-logo-pill">Cluely</div>
+            <div class="hero-logo-pill">HelloTrade</div>
+            <div class="hero-logo-pill">Newmark</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<!-- ─── WHAT WE DO ────────────────────────────────────── -->
+<section class="what-we-do" id="whatWeDo">
+  <div class="wwd-bg">
+    <div class="wwd-bg-video"><div class="placeholder-media">AI & Design</div></div>
+    <div class="wwd-bg-video"><div class="placeholder-media">Ambitious Co.</div></div>
+    <div class="wwd-bg-video"><div class="placeholder-media">Launch</div></div>
+    <div class="wwd-bg-video"><div class="placeholder-media">Grow</div></div>
+    <div class="wwd-bg-video"><div class="placeholder-media">Lead</div></div>
+  </div>
+  <div class="wwd-header">
+    <div class="rive-icon" aria-hidden="true">
+      <svg viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="29" cy="38" rx="16" ry="22"/>
+        <ellipse cx="47" cy="38" rx="16" ry="22"/>
+      </svg>
+    </div>
+    <h1 class="wwd-h1" id="wwdH1">En la frontera de la <span class="highlight-word crystalline-text" data-idx="0">IA y el diseño</span>. Transformamos cómo las <span class="highlight-word crystalline-text" data-idx="1">empresas más ambiciosas</span> del mundo <span class="highlight-word crystalline-text" data-idx="2">lanzan</span>, <span class="highlight-word crystalline-text" data-idx="3">crecen</span> y <span class="highlight-word crystalline-text" data-idx="4">lideran</span>.</h1>
+  </div>
+  <div class="wwd-hover-cards" aria-hidden="true" id="wwdHoverCards">
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 1</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 2</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 3</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 4</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 5</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 6</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 7</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 8</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 9</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 10</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 11</div></div>
+    <div class="wwd-hover-card"><div class="placeholder-media">Project 12</div></div>
+  </div>
+</section>
+
+<!-- ─── FEATURED PROJECTS ─────────────────────────────── -->
+<section class="featured-projects-section" id="featuredProjects">
+  <div class="fp-header-callout">
+    <div class="rive-icon" aria-hidden="true">
+      <svg class="ship-rings advanced-rings" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Faint bounding circle -->
+        <circle class="ring-bound" cx="100" cy="100" r="80" />
+        <!-- Vertical axis line -->
+        <line class="ring-axis" x1="100" y1="0" x2="100" y2="200" />
+        
+        <!-- Outer overlapping circles -->
+        <g class="outer-circles">
+          <circle class="ring-out out-1" cx="100" cy="75" r="35" />
+          <circle class="ring-out out-2" cx="100" cy="125" r="35" />
+        </g>
+
+        <!-- Group for 3D atomic rings -->
+        <g class="atom-core">
+          <ellipse class="ring-orb orb-1" cx="100" cy="100" rx="20" ry="55" />
+          <ellipse class="ring-orb orb-2" cx="100" cy="100" rx="20" ry="55" />
+          <ellipse class="ring-orb orb-3" cx="100" cy="100" rx="20" ry="55" />
+        </g>
+      </svg>
+    </div>
+    <p class="tagline crystalline-text" id="fpTagline">QUÉ ES LO QUE HACEMOS</p>
+  </div>
+
+  <div class="fp-cards">
+    <div class="fp-card">
+      <div class="fp-card-inner">
+        <div class="fp-card-content">
+          <div class="fp-card-info"><p>Identidades que se recuerdan.</p></div>
+          <div class="fp-card-content-main">
+            <div class="fp-card-title"><h2>Diseño de Marca</h2></div>
+            <div class="fp-card-desc"><p class="lg">Sistemas de logotipos, tipografía, color, manuales de marca. Todo lo que tu marca necesita para dominar su mercado, diseñado y entregado en un solo proyecto.</p></div>
+          </div>
+        </div>
+        <div class="fp-card-media"><div class="placeholder-media">Diseño de Marca</div></div>
+      </div>
+    </div>
+    <div class="fp-card">
+      <div class="fp-card-inner">
+        <div class="fp-card-content">
+          <div class="fp-card-info"><p>Productos que tus usuarios realmente quieren usar.</p></div>
+          <div class="fp-card-content-main">
+            <div class="fp-card-title"><h2>Diseño de Producto</h2></div>
+            <div class="fp-card-desc"><p class="lg">Interfaces, paneles de control, aplicaciones móviles, flujos de integración. Cada pantalla es prototipada, probada y refinada hasta que la experiencia se siente natural.</p></div>
+          </div>
+        </div>
+        <div class="fp-card-media"><div class="placeholder-media">Diseño de Producto</div></div>
+      </div>
+    </div>
+    <div class="fp-card">
+      <div class="fp-card-inner">
+        <div class="fp-card-content">
+          <div class="fp-card-info"><p>Animación que convierte lo estático en inolvidable.</p></div>
+          <div class="fp-card-content-main">
+            <div class="fp-card-title"><h2>Motion Graphics</h2></div>
+            <div class="fp-card-desc"><p class="lg">Desde microinteracciones hasta videos de campaña completos. Nuestro trabajo de animación añade profundidad, guía la atención y hace que cada fotograma cuente.</p></div>
+          </div>
+        </div>
+        <div class="fp-card-media"><div class="placeholder-media">Motion Graphics</div></div>
+      </div>
+    </div>
+    <div class="fp-card">
+      <div class="fp-card-inner">
+        <div class="fp-card-content">
+          <div class="fp-card-info"><p>Sitios web que rinden desde el primer día.</p></div>
+          <div class="fp-card-content-main">
+            <div class="fp-card-title"><h2>Diseño Web</h2></div>
+            <div class="fp-card-desc"><p class="lg">Código limpio, interacciones bien pensadas, diseños responsivos. Cada sitio que construimos luce excepcional y funciona de manera impecable en todos los dispositivos.</p></div>
+          </div>
+        </div>
+        <div class="fp-card-media"><div class="placeholder-media">Diseño Web</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SPOTLIGHT ─────────────────────────────────────── -->
+<section class="spotlight" id="spotlight">
+  <!-- 1. Full Bleed Backgrounds -->
+  <div class="spotlight-bgs" id="spotlightBgs">
+    <div class="spotlight-bg-item active"><div class="placeholder-media">Figma BG</div></div>
+    <div class="spotlight-bg-item"><div class="placeholder-media">Coinbase BG</div></div>
+    <div class="spotlight-bg-item"><div class="placeholder-media">Cluely BG</div></div>
+    <div class="spotlight-bg-item"><div class="placeholder-media">Sperm Racing BG</div></div>
+    <div class="spotlight-bg-item"><div class="placeholder-media">Rhythm BG</div></div>
+    <div class="spotlight-bg-item"><div class="placeholder-media">Duffle BG</div></div>
+    <div class="spotlight-bg-item"><div class="placeholder-media">HelloTrade BG</div></div>
+    <div class="spotlight-bg-item"><div class="placeholder-media">Liquid BG</div></div>
+  </div>
+
+
+
+  <div class="spotlight-content-wrapper">
+    <div class="spotlight-titles-container">
+      <div class="spotlight-string spotlight-string-top"></div>
+      <div class="spotlight-string spotlight-string-bottom"></div>
+      <div class="spotlight-titles-list">
+        <div class="spotlight-title-item"><h1 class="active" data-idx="0">Figma</h1></div>
+        <div class="spotlight-title-item"><h1 data-idx="1">Coinbase</h1></div>
+        <div class="spotlight-title-item"><h1 data-idx="2">Cluely</h1></div>
+        <div class="spotlight-title-item"><h1 data-idx="3">Sperm Racing</h1></div>
+        <div class="spotlight-title-item"><h1 data-idx="4">Rhythm</h1></div>
+        <div class="spotlight-title-item"><h1 data-idx="5">Duffle</h1></div>
+        <div class="spotlight-title-item"><h1 data-idx="6">HelloTrade</h1></div>
+        <div class="spotlight-title-item"><h1 data-idx="7">Liquid</h1></div>
+      </div>
+    </div>
+
+    <div class="spotlight-images" id="spotlightImages">
+      <div class="spotlight-img active"><div class="placeholder-media">Figma PIP</div></div>
+      <div class="spotlight-img"><div class="placeholder-media">Coinbase PIP</div></div>
+      <div class="spotlight-img"><div class="placeholder-media">Cluely PIP</div></div>
+      <div class="spotlight-img"><div class="placeholder-media">Sperm Racing PIP</div></div>
+      <div class="spotlight-img"><div class="placeholder-media">Rhythm PIP</div></div>
+      <div class="spotlight-img"><div class="placeholder-media">Duffle PIP</div></div>
+      <div class="spotlight-img"><div class="placeholder-media">HelloTrade PIP</div></div>
+      <div class="spotlight-img"><div class="placeholder-media">Liquid PIP</div></div>
+    </div>
+  </div>
+  <p class="spotlight-eyebrow crystalline-text">Discover</p>
+</section>
+
+<!-- ─── CLIENT REVIEWS ────────────────────────────────── -->
+<section class="reviews-section" id="reviewsSection">
+  <div class="reviews-header">
+    <div class="reviews-ring" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="35" cy="50" r="20"/>
+        <circle cx="50" cy="50" r="20"/>
+        <circle cx="65" cy="50" r="20"/>
+      </svg>
+    </div>
+    <h2 id="reviewsH2">En sus palabras.</h2>
+  </div>
+    <div class="cr-container" id="crContainer">
+    <div class="cr-viewport">
+      <div class="cr-track" id="crTrack">
+        <div class="cr-track-inner" style="display:flex; gap:1.5rem; padding-right:1.5rem;">
+
+        <div class="cr-card">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media" style="background:#093222">lute is</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Counter — Founder</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">@lute</span>
+            </div>
+            <p>Our brand went from forgettable to immediately recognizable. Filter gets the culture — they don't just make it look good, they make it feel right. The social work alone changed how people perceive us.</p>
+          </div>
+        </div>
+        <div class="cr-card">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media">Sperm Racing</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Eric Zhu — Founder</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">Aviato &amp; Sperm Racing</span>
+            </div>
+            <p>Genuinely the best design team I've worked with. We came in with a concept that was... let's say unconventional. They came back with something even wilder. That creative range is rare — and it's why I keep coming back.</p>
+          </div>
+        </div>
+        <div class="cr-card cr-card-wide">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media" style="background:#e8edf5">Acctualteam</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Atikh — CEO</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">Acctualteam</span>
+            </div>
+            <p>Filter redesigned our entire product experience from the ground up. The invoice flows feel native, the brand feels premium. It's the kind of design work that earns trust before a user reads a single word.</p>
+          </div>
+        </div>
+        <div class="cr-card">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media">Azura</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Jackson Denka — CEO</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">Azura</span>
+            </div>
+            <p>Filter doesn't do ordinary — and I mean that literally. Every single delivery pushed the envelope. The kind of work that makes your users stop mid-scroll.</p>
+          </div>
+        </div>
+        <div class="cr-card">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media">Project 5</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Alex M. — Founder</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">@hello</span>
+            </div>
+            <p>Working with Filter was a turning point for our product. They have an uncanny ability to translate abstract ideas into stunning visual systems that actually convert and drive real growth.</p>
+          </div>
+        </div>
+
+        </div>
+        <div class="cr-track-inner" style="display:flex; gap:1.5rem; padding-right:1.5rem;">
+
+        <div class="cr-card">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media" style="background:#093222">lute is</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Counter — Founder</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">@lute</span>
+            </div>
+            <p>Our brand went from forgettable to immediately recognizable. Filter gets the culture — they don't just make it look good, they make it feel right. The social work alone changed how people perceive us.</p>
+          </div>
+        </div>
+        <div class="cr-card">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media">Sperm Racing</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Eric Zhu — Founder</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">Aviato &amp; Sperm Racing</span>
+            </div>
+            <p>Genuinely the best design team I've worked with. We came in with a concept that was... let's say unconventional. They came back with something even wilder. That creative range is rare — and it's why I keep coming back.</p>
+          </div>
+        </div>
+        <div class="cr-card cr-card-wide">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media" style="background:#e8edf5">Acctualteam</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Atikh — CEO</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">Acctualteam</span>
+            </div>
+            <p>Filter redesigned our entire product experience from the ground up. The invoice flows feel native, the brand feels premium. It's the kind of design work that earns trust before a user reads a single word.</p>
+          </div>
+        </div>
+        <div class="cr-card">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media">Azura</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Jackson Denka — CEO</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">Azura</span>
+            </div>
+            <p>Filter doesn't do ordinary — and I mean that literally. Every single delivery pushed the envelope. The kind of work that makes your users stop mid-scroll.</p>
+          </div>
+        </div>
+        <div class="cr-card">
+          <div class="cr-card-img-area">
+            <div class="placeholder-media">Project 5</div>
+            <span class="cr-tag">Client Review</span>
+          </div>
+          <div class="cr-card-body">
+            <div class="cr-meta">
+              <div class="cr-avatar"></div>
+              <span class="cr-name">Alex M. — Founder</span>
+              <div class="cr-co-logo"></div>
+              <span class="cr-handle">@hello</span>
+            </div>
+            <p>Working with Filter was a turning point for our product. They have an uncanny ability to translate abstract ideas into stunning visual systems that actually convert and drive real growth.</p>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-left">
+      <div class="footer-logo-custom">
+        <span class="logo-altamar">Altama<span class="logo-r">r</span></span>
+        <span class="logo-divider">|</span>
+        <span class="logo-studio">Studio</span>
+      </div>
+      <h2>Boca del Rio, Veracruz. Mexico.</h2>
+    </div>
+    <div class="footer-right">
+      <a href="index.html">Principal</a>
+      <a href="studio.html">Proyectos</a>
+      <a href="connect.html">Contactanos</a>
+    </div>
+  </div>
+  <div class="footer-socials">
+    <div class="footer-social-row">
+      <a style="cursor:default; pointer-events:none;">LinkedIn</a>
+      <a style="cursor:default; pointer-events:none;">X</a>
+    </div>
+    <p class="footer-tagline">Ponte en contacto. Nos encantaría escuchar lo que estás construyendo.</p>
+  </div>
+  <div class="footer-bottom">
+    <p>Un Estudio de Diseño Digital</p>
+    <p>Todos los derechos reservados &copy; 2026</p>
+  </div>
+</footer>
+
+<!-- Cookie -->
+<div class="cookie-notice" id="cookieNotice">
+  <p>Este sitio web utiliza cookies.</p>
+  <button class="cookie-btn" id="cookieBtn">Aceptar</button>
+</div>
+
+<!-- Global Hover Popup Container -->
+<div class="hover-popup" id="hoverPopup">
+  <div class="hover-popup-inner">
+    <div class="placeholder-media" id="hoverPopupImg">Media</div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
